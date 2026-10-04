@@ -1,0 +1,40 @@
+:root{
+    box-sizing: border-box;
+    /* --textbox-color: rgb(195, 222, 226); */
+    --textbox-color: rgb(168, 231, 241);
+}
+
+@font-face {
+    font-family: Opensans;
+    src: url("./assets/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url("./assets/fonts/Nunito/Nunito-VariableFont_wght.ttf");
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    /* overflow: hidden; */
+    font-family: Nunito;
+}
+
+.btn-main{
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: purple;
+    color: white;
+}
+
+.nav-div{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    border-bottom: 1px solid gray;
+    height: 50px;
+    padding: 0em 1em;
+}
