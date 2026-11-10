@@ -2,6 +2,7 @@
     box-sizing: border-box;
     /* --textbox-color: rgb(195, 222, 226); */
     --textbox-color: rgb(168, 231, 241);
+    --replybox-color: rgb(217, 240, 244);
 }
 
 @font-face {
@@ -20,6 +21,7 @@ body{
     width: 100vw;
     /* overflow: hidden; */
     font-family: Nunito;
+    background-color: rgb(238, 240, 245);
 }
 
 .btn-main{
@@ -28,6 +30,7 @@ body{
     border-radius: 5px;
     background-color: purple;
     color: white;
+    cursor: pointer;
 }
 
 .nav-div{
@@ -37,4 +40,28 @@ body{
     border-bottom: 1px solid gray;
     height: 50px;
     padding: 0em 1em;
+}
+
+.alerts-div{
+    position: fixed;
+    width: 40%;
+    min-width: 200px;
+    height: fit-content;
+    right: 0;
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-right: 1em;
+    z-index: 13;
+    overflow-y: hidden;
+}
+
+.alert-item-div{
+    padding: 10px;
+    margin-bottom: 5px;
+    /* background-color: rgb(97, 182, 97); */
+    /* background-color: rgb(255, 135, 135); */
+    color: black;
+    border-radius: 5px;
 }

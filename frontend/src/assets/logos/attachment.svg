@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 170" class="options-svg" width="200" height="200">
+    <path d="M 10 130 L 10 50" stroke="black" stroke-width="12" stroke-linecap="round" fill="none"></path>
+    <path d="M 10 50 A 40 40 0 0 1 90 50" stroke="black" stroke-width="12" fill="none"></path>
+    <path d="M 90 50 L 90 130" stroke="black" stroke-width="12" fill="none"></path>
+    <path d="M 90 130 A 20 20 0 0 1 30 130" stroke="black" stroke-width="12" fill="none"></path>
+    <path d="M 30 130 L 30 50" stroke="black" stroke-width="12" fill="none"></path>
+    <path d="M 30 50 A 10 10 0 0 1 70 50" stroke="black" stroke-width="12" fill="none"></path>
+    <path d="M 70 50 L 70 130" stroke="black" stroke-width="12" stroke-linecap="round" fill="none"></path>
+</svg>

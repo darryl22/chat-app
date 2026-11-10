@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 interface loggedInUser {
     setLoginState: (val: boolean)=> void,
     setCurrentUser: (val: string) => void
 }
 function Signup({setLoginState, setCurrentUser}: loggedInUser) {
-
+    console.log("region", Intl.DateTimeFormat().resolvedOptions().timeZone)
     const navigate = useNavigate()
     const [signupInfo, setSignupInfo] = useState({
         username: "",
@@ -77,19 +78,28 @@ function Signup({setLoginState, setCurrentUser}: loggedInUser) {
         }
     }
     return(
-        <div>
-            <form style={{display: "flex", alignItems: "center", flexDirection: "column"}} onSubmit={submitSignup}>
-                <h1>Signup</h1>
-                <label htmlFor="username">Username</label>
-                <input type="text" name="username" onChange={handleSignup}/>
+        <div className="auth-outer-div">
+            <form className="auth-form" onSubmit={submitSignup}>
+                <p style={{fontSize: "2em", marginBottom: "0em", marginTop: "0em"}}>Messaging App</p>
+                <p style={{margin: "5px 0px"}}>Create a new account</p>
+                <div className="auth-divider"></div>
+                <div className="auth-input-div">
+                    <label htmlFor="username" style={{fontWeight: "bold", fontSize: "0.9em"}}>Username</label>
+                    <input type="text" name="username" onChange={handleSignup} className="auth-input" />
+                </div>
 
-                <label htmlFor="password">Password</label>
-                <input type="password" name="password" onChange={handleSignup}/>
+                <div className="auth-input-div">
+                    <label htmlFor="password" style={{fontWeight: "bold", fontSize: "0.9em"}}>Password</label>
+                    <input type="password" name="password" onChange={handleSignup} className="auth-input" />
+                </div>
 
-                <label htmlFor="confirmpassword">Confirm Password</label>
-                <input type="confirmpassword" name="confirmpassword" onChange={handleSignup}/>
+                <div className="auth-input-div">
+                    <label htmlFor="confirmpassword" style={{fontWeight: "bold", fontSize: "0.9em"}}>Confirm Password</label>
+                    <input type="confirmpassword" name="confirmpassword" onChange={handleSignup} className="auth-input" />
+                </div>
                 <p style={{display: signupMessage.show ? "inline" : "none"}}>{signupMessage.message}</p>
-                <button style={{marginTop: "1em"}}>Submit</button>
+                <Link to="/login">login</Link>
+                <button className="auth-submit">Submit</button>
 
             </form>
         </div>
